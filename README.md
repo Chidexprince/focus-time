@@ -1,2 +1,2 @@
 # focus-time
-A simple react native app to increase focus while worrking
+A simple react native app to increase focus while working
