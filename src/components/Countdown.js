@@ -8,7 +8,7 @@ const formatTime = (time) => time < 10 ? `0${time}` : time;
 
 
 
-export const Countdown = ({minutes = 1, isPaused, onProgress}) => {
+export const Countdown = ({minutes = 1, isPaused, onProgress, onEnd}) => {
     const [millis, setMillis] = useState(null);
     const mins = Math.floor(millis / 1000 / 60) % 60;
     const secs = Math.floor(millis / 1000) % 60;
@@ -16,7 +16,9 @@ export const Countdown = ({minutes = 1, isPaused, onProgress}) => {
     const countDown = () => {
         setMillis((time) => {
             if(time === 0) {
-                //some stuffs
+                
+                clearInterval(interval.current);
+                onEnd();
                 return time;
             }
 
