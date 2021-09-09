@@ -26,10 +26,10 @@ export const Focus = ({addSubject}) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 0.5
     },
     titleContainer: {
-        flex: 0.5,
+        flex: 1,
         padding: spacing.md,
         justifyContent: 'center',
     },
